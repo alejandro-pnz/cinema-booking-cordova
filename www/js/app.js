@@ -22,15 +22,15 @@ angular.module('cinema', ['ionic'])
 .config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
-        .state('intro', {
+        .state('booking', {
             url: '/',
-            templateUrl: 'templates/intro.html',
-            controller: 'IntroCtrl'
+            templateUrl: 'templates/booking.html',
+            controller: 'BookingCtrl'
         })
-        .state( 'main', {
+        .state( 'timetable', {
             url: '/',
-            templateUrl: 'templates/main.html',
-            controller: 'MainPageSlideCtrl'
+            templateUrl: 'templates/timetable.html',
+            controller: 'TimetableCtrl'
         });
 
     $urlRouterProvider.otherwise( "/");
