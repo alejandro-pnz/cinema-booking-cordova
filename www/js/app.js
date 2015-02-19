@@ -22,35 +22,32 @@ angular.module('cinema', ['ionic'])
 .config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
+        .state('menu', {
+            url: "/menu",
+            abstract: true,
+            templateUrl: "menu"
+        })
+        .state('home', {
+            url: "/home",
+            views: {
+                'menuContent': {
+                    templateUrl: "home"
+                }
+            }
+        })
         .state('booking', {
             url: '/',
-            templateUrl: 'templates/booking.html',
+            templateUrl: 'booking',
             controller: 'BookingCtrl'
         })
         .state( 'timetable', {
-            url: '/',
-            templateUrl: 'templates/timetable.html',
-            controller: 'TimetableCtrl'
+            url: '/timetable',
+            views: {
+                'menuContent' :{
+                    templateUrl: "timetable"
+                }
+            }
         });
 
-    $urlRouterProvider.otherwise( "/");
-})
-
-.controller('IntroCtrl', function($scope, $stateProvider, $ionicSlideBoxDelegate) {
-    $scope.startApp = function() {
-        $stateProvider.go( 'main');
-    };
-
-    $scope.next = function() {
-        $ionicSlideBoxDelegate.next();
-    };
-
-    $scope.previous = function() {
-        $ionicSlideBoxDelegate.previous();
-    };
-
-    $scope.slideChanged = function(index)
-    {
-        $scope.slideIndex = index;
-    };
+    $urlRouterProvider.otherwise( "/home");
 })
