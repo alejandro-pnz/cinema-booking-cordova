@@ -1,15 +1,15 @@
 /**
  * Created by alejandro on 16.02.15.
  */
-angular.module('cinema', ['ionic'])
+angular.module('cinema.controllers', [])
 
     .controller('MenuCtrl', function($scope) {
 
         $scope.menuItems = [
-            { title: 'Моя бронь', state: 'templates/about.html' },
-            { title: 'Расписание сеансов', state: 'templates/facts.html' },
-            { title: 'Скоро на экранах', state: 'templates/about.html' },
-            { title: 'Акции', state: 'templates/home.html' }
+            { title: 'Моя бронь', state: '#/app/booking' },
+            { title: 'Расписание сеансов', state: '#/app/timetable' },
+            { title: 'Скоро на экранах', state: '#/app/soon' },
+            { title: 'Акции', state: '#/app/home' }
         ];
 
         $scope.mess  = function (msg) {

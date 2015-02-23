@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('cinema', ['ionic'])
+angular.module('cinema', ['ionic', 'cinema.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,32 +22,44 @@ angular.module('cinema', ['ionic'])
 .config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
-        .state('menu', {
-            url: "/menu",
+        .state('app', {
+            url: "/app",
             abstract: true,
-            templateUrl: "menu"
+            templateUrl: "templates/menu.html"
         })
-        .state('home', {
+        .state('app.home', {
             url: "/home",
             views: {
                 'menuContent': {
-                    templateUrl: "home"
+                    templateUrl: "templates/home.html"
                 }
             }
         })
-        .state('booking', {
-            url: '/',
-            templateUrl: 'booking',
-            controller: 'BookingCtrl'
+        .state('app.booking', {
+            url: "/booking",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/booking.html"
+                    //controller: 'PlaylistsCtrl'
+                }
+            }
         })
-        .state( 'timetable', {
+        .state( 'app.timetable', {
             url: '/timetable',
             views: {
                 'menuContent' :{
-                    templateUrl: "timetable"
+                    templateUrl: "templates/timetable.html"
+                }
+            }
+        })
+        .state( 'app.soon', {
+            url: '/soon',
+            views: {
+                'menuContent' :{
+                    templateUrl: "templates/soon.html"
                 }
             }
         });
 
-    $urlRouterProvider.otherwise( "/home");
+    $urlRouterProvider.otherwise( "/app/home");
 })
