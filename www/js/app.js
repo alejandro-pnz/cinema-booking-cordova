@@ -40,7 +40,6 @@ angular.module('cinema', ['ionic', 'cinema.controllers'])
             views: {
                 'menuContent': {
                     templateUrl: "templates/booking.html"
-                    //controller: 'PlaylistsCtrl'
                 }
             }
         })
@@ -61,5 +60,5 @@ angular.module('cinema', ['ionic', 'cinema.controllers'])
             }
         });
 
-    $urlRouterProvider.otherwise( "/app/home");
+    $urlRouterProvider.otherwise( "/app/timetable");
 })

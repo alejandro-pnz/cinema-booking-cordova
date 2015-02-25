@@ -1,15 +1,42 @@
 <ion-view title="Расписание сеансов">
     <ion-content padding="true">
-        <div class="list">
+        <div class="list-header">
+            <div class="item item-divider-platform">
+                Сегодня</div>
 
-            <div class="item item-divider-ios">
-               Сегодня</div>
-            <a class="item item-avatar" href="#">
+                <a class="item item-thumbnail-left" href="#">
+                    <img id="img_poster" src="http://fc05.deviantart.net/fs71/f/2013/066/6/b/woodland_camo_plates_1k_by_garryts-d5x9p4p.png">
+                    <h2>50 оттенков Хакки</h2>
+                    <p>Боевик, комедия</p>
+                    <!--div class="row-stretch">
+                        <div class="col-100">
+                            <p>Боевик, комедия</p>
+                        </div>
+                    </div>
+                    <div ng-repeat="session in sessions" class="item item-divider" ng-controller="TimetableCtrl">
+                        <ion-item>{{session.time}}</ion-item>
+                    </div-->
+                </a>
+                <a class="item item-thumbnail-left" href="#">
+                    <img src="https://sovremennik.info/up/film/1188/poster_big.jpg">
+                    <h2>Губка Боб</h2>
+                    <p>Детский, комедия</p>
+                </a>
+                <div class="item item-divider">
+                </div>
+
+            <div class="item item-divider-platform">
+                Завтра
+            </div>
+            <a class="item item-thumbnail-left" href="#">
                 <img src="http://fc05.deviantart.net/fs71/f/2013/066/6/b/woodland_camo_plates_1k_by_garryts-d5x9p4p.png">
                 <h2>50 оттенков Хакки</h2>
                 <p>Боевик, комедия</p>
             </a>
-
+            <a class="item item-thumbnail-left" href="#">
+                <img src="https://sovremennik.info/up/film/1188/poster_big.jpg">
+                <h2>Губка Боб</h2>
+                <p>Детский, комедия</p>
+            </a>
         </div>
-    </ion-content>
 </ion-view>
