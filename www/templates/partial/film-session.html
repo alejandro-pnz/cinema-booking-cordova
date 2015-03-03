@@ -1,0 +1,10 @@
+<!--https://docs.angularjs.org/tutorial/step_08 -->
+<a class="item item-thumbnail-left" href="#">
+    <img id="img_poster" src="http://fc05.deviantart.net/fs71/f/2013/066/6/b/woodland_camo_plates_1k_by_garryts-d5x9p4p.png">
+    <h2>50 оттенков Хакки</h2>
+    <p class="padding-bottom">Боевик, комедия</p>
+    <ion-list ng-controller="TimetableCtrl">
+        <ion-item  ng-repeat="session in sessions" href="#/app/booking">
+            {{session.time}}</ion-item>
+    </ion-list>
+</a>

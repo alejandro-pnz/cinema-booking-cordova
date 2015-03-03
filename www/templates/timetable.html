@@ -1,42 +1,22 @@
 <ion-view title="Расписание сеансов">
-    <ion-content padding="true">
+    <ion-content class="row-center" ng-controller="TimetableCtrl">
         <div class="list-header">
-            <div class="item item-divider-platform">
-                Сегодня</div>
-
-                <a class="item item-thumbnail-left" href="#">
-                    <img id="img_poster" src="http://fc05.deviantart.net/fs71/f/2013/066/6/b/woodland_camo_plates_1k_by_garryts-d5x9p4p.png">
-                    <h2>50 оттенков Хакки</h2>
-                    <p>Боевик, комедия</p>
-                    <!--div class="row-stretch">
-                        <div class="col-100">
-                            <p>Боевик, комедия</p>
-                        </div>
+            <h1 class="item item-divider-platform">
+                Сегодня</h1>
+            <div class="item " style="margin-bottom: 10px;">
+                <div class="row" style="margin-bottom: 10px">
+                    <img class="col-34" src="https://sovremennik.info/up/film/1196/poster_big.jpg" style="max-height: 120px; max-width: 80px">
+                    <div class="col-66" style="margin-left: 20px">
+                        <h2>Кровавая леди Батори</h2>
+                        <p>Триллер</p>
+                        <p>1ч 54мин</p>
                     </div>
-                    <div ng-repeat="session in sessions" class="item item-divider" ng-controller="TimetableCtrl">
-                        <ion-item>{{session.time}}</ion-item>
-                    </div-->
-                </a>
-                <a class="item item-thumbnail-left" href="#">
-                    <img src="https://sovremennik.info/up/film/1188/poster_big.jpg">
-                    <h2>Губка Боб</h2>
-                    <p>Детский, комедия</p>
-                </a>
-                <div class="item item-divider">
                 </div>
-
-            <div class="item item-divider-platform">
-                Завтра
+                <div ui-sref="app.booking" ng-repeat="session in sessions" ng-switch on="$index % 2">
+                    <button ng-switch-when="0" class="col col-50 item item-balanced" style="margin-bottom: 10px; text-align: center; float: left;">{{session.time}}</button>
+                    <button ng-switch-when="1" class="col col-50 item item-balanced" style="margin-bottom: 10px; text-align: center;float: right;">{{session.time}}</button>
+                </div>
             </div>
-            <a class="item item-thumbnail-left" href="#">
-                <img src="http://fc05.deviantart.net/fs71/f/2013/066/6/b/woodland_camo_plates_1k_by_garryts-d5x9p4p.png">
-                <h2>50 оттенков Хакки</h2>
-                <p>Боевик, комедия</p>
-            </a>
-            <a class="item item-thumbnail-left" href="#">
-                <img src="https://sovremennik.info/up/film/1188/poster_big.jpg">
-                <h2>Губка Боб</h2>
-                <p>Детский, комедия</p>
-            </a>
         </div>
+    <ion-content>
 </ion-view>

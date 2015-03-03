@@ -1,1 +1,34 @@
 /* Empty. Add your own CSS if you like */
+.item-thumbnail-left .item-content {
+    min-height: 0px;
+}
+
+.booking-icon {
+    height: 24px;
+    width: 24px;
+    content:url(http://placehold.it/32x32);
+    /*<img src="https://sovremennik.info/img/component/kino/hall/tooltip.png">*/
+    /*border-spacing: 5px !important;*/
+    border-collapse: collapse;
+    margin-left: 3px;
+}
+.centered {
+    position: absolute;
+    left: -50%;
+    top: -50%;
+}
+.image-cropper {
+    position: relative;
+    width: 360px;
+    height: 240px;
+    overflow: hidden;
+    border: 1px red solid;
+}
+.item-poster> img:first-child, .item-thumbnail-left .item-image, .item-thumbnail-left .item-content > img:first-child, .item-thumbnail-left .item-content .item-image {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    max-width: 80px;
+    max-height: 120px;
+    width: 100%;
+}

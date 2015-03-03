@@ -18,7 +18,6 @@ angular.module('cinema', ['ionic', 'cinema.controllers'])
   });
 })
 
-
 .config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
@@ -56,6 +55,14 @@ angular.module('cinema', ['ionic', 'cinema.controllers'])
             views: {
                 'menuContent' :{
                     templateUrl: "templates/soon.html"
+                }
+            }
+        })
+        .state( 'app.desc', {
+            url: '/desc',
+            views: {
+                'menuContent' :{
+                    templateUrl: "templates/desc.html"
                 }
             }
         });

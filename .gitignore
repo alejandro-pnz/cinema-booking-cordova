@@ -4,3 +4,8 @@
 node_modules/
 platforms/
 plugins/
+
+platforms\android\bin
+platforms\android\CordovaLib\bin
+platforms\android\CordovaLib\gen
+platforms\android\gen

@@ -18,12 +18,13 @@
     <!-- Left menu -->
     <ion-side-menu side="left">
         <ion-header-bar class="bar-assertive">
-            <h1 class="title">Меню</h1>
+            <h1 class="title">Современник</h1>
         </ion-header-bar>
         <ion-content>
             <ion-list ng-controller="MenuCtrl">
-                <ion-item ng-repeat="menuItem in menuItems" href={{menuItem.state}} menu-close>
+                <ion-item class="item-icon-left" ng-repeat="menuItem in menuItems" href={{menuItem.state}} menu-close>
                     {{menuItem.title}}
+                    <i class="icon {{menuItem.icon}}"></i>
                 </ion-item>
             </ion-list>
         </ion-content>
