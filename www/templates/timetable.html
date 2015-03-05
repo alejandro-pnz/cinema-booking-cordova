@@ -5,11 +5,39 @@
                 Сегодня</h1>
             <div class="item " style="margin-bottom: 10px;">
                 <div class="row" style="margin-bottom: 10px">
-                    <img class="col-34" src="https://sovremennik.info/up/film/1196/poster_big.jpg" style="max-height: 120px; max-width: 80px">
+                    <img class="col-34" src="https://sovremennik.info/up/film/1196/poster.jpg" style="max-height: 120px; max-width: 80px">
                     <div class="col-66" style="margin-left: 20px">
-                        <h2>Кровавая леди Батори</h2>
+                        <strong>Кровавая леди Батори</strong>
                         <p>Триллер</p>
                         <p>1ч 54мин</p>
+                    </div>
+                </div>
+                <div ui-sref="app.booking" ng-repeat="session in sessions" ng-switch on="$index % 2">
+                    <button ng-switch-when="0" class="col col-50 item item-balanced" style="margin-bottom: 10px; text-align: center; float: left;">{{session.time}}</button>
+                    <button ng-switch-when="1" class="col col-50 item item-balanced" style="margin-bottom: 10px; text-align: center;float: right;">{{session.time}}</button>
+                </div>
+            </div>
+            <div class="item " style="margin-bottom: 10px;">
+                <div class="row" style="margin-bottom: 10px">
+                    <img class="col-34" src="https://sovremennik.info/up/film/1210/poster.jpg" style="max-height: 120px; max-width: 80px">
+                    <div class="col-66" style="margin-left: 20px">
+                        <strong>Снайпер</strong>
+                        <p>Боевик</p>
+                        <p>2ч 12мин</p>
+                    </div>
+                </div>
+                <div ui-sref="app.booking" ng-repeat="session in sessions" ng-switch on="$index % 2">
+                    <button ng-switch-when="0" class="col col-50 item item-balanced" style="margin-bottom: 10px; text-align: center; float: left;">{{session.time}}</button>
+                    <button ng-switch-when="1" class="col col-50 item item-balanced" style="margin-bottom: 10px; text-align: center;float: right;">{{session.time}}</button>
+                </div>
+            </div>
+            <div class="item " style="margin-bottom: 10px;">
+                <div class="row" style="margin-bottom: 10px">
+                    <img class="col-34" src="https://sovremennik.info/up/film/1193/poster_big.jpg" style="max-height: 120px; max-width: 80px">
+                    <div class="col-66" style="margin-left: 20px">
+                        <strong>Робот по имени Чаппи</strong>
+                        <p>Триллер, боевик</p>
+                        <p>1ч 30мин</p>
                     </div>
                 </div>
                 <div ui-sref="app.booking" ng-repeat="session in sessions" ng-switch on="$index % 2">

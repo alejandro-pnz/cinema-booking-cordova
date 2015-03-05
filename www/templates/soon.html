@@ -1,29 +1,59 @@
 <ion-view title="Скоро">
-    <ion-content padding="true">
-        <div class="list card">
-            <div class="item item-thumbnail-left">
-                <img src="https://sovremennik.info/up/film/1199/poster_big.jpg">
-                <h2>Духless 2</h2>
-                <p>Драма</p>
-                <p>5 марта - 18 марта</p>
+    <ion-content>
+        <div class="card" ng-controller="SoonCtrl">
+            <div class="row item">
+                <img class="col-34" src="https://sovremennik.info/up/film/1211/poster.jpg" style="max-height: 120px; max-width: 80px;margin-bottom: 10px; margin-top: 10px; font-family: Ionicons"/>
+                <div class="col-66 padding" style="margin-left: 10px;margin-bottom: 5px; margin-top: 5px">
+                    <strong>Суперфорсаж!</strong>
+                    <p>Комедия</p>
+                    <p>C 12 марта</p>
+                    <button class="button button-balanced button-small" ng-click="showToast('Вам будет отправлено уведомление', 'long', 'center')">Узнать об открытии брони</button>
+                </div>
             </div>
-            <div class="item item-thumbnail-left">
-                <img src="https://sovremennik.info/up/film/1210/poster_big.jpg">
-                <h2>Снайпер</h2>
-                <p>Драма</p>
-                <p>5 марта - 18 марта</p>
+            <div class="row item">
+                <img class="col-34" src="https://sovremennik.info/up/film/1203/poster.jpg" style="max-height: 120px; max-width: 80px;margin-bottom: 10px; margin-top: 10px; font-family: Ionicons"/>
+                <div class="col-66 padding" style="margin-left: 10px;margin-bottom: 5px; margin-top: 5px">
+                    <strong>Отель «Мэриголд». Заселение продолжается</strong>
+                    <p>Драма, комедия</p>
+                    <p>C 12 марта</p>
+                    <button class="button button-balanced button-small" ng-click="showToast('Вам будет отправлено уведомление', 'long', 'center')">Узнать об открытии брони</button>
+                </div>
             </div>
-            <div class="item item-thumbnail-left" ui-sref="#">
-                <img src="https://sovremennik.info/up/film/1192/poster_big.jpg">
-                <h2>Золушка</h2>
-                <p>Драма</p>
-                <p>5 марта - 18 марта</p>
+            <div class="row item">
+                <img class="col-34" src="https://sovremennik.info/up/film/1204/poster.jpg" style="max-height: 120px; max-width: 80px;margin-bottom: 10px; margin-top: 10px; font-family: Ionicons"/>
+                <div class="col-66 padding" style="margin-left: 10px;margin-bottom: 5px; margin-top: 5px">
+                    <strong>Проклятие: Начало конца</strong>
+                    <p>Ужасы</p>
+                    <p>C 12 марта</p>
+                    <button class="button button-balanced button-small" ng-click="showToast('Вам будет отправлено уведомление', 'long', 'center')">Узнать об открытии брони</button>
+                </div>
             </div>
-            <div class="item item-thumbnail-left">
-                <img src="https://sovremennik.info/up/film/1198/poster_big.jpg">
-                <h2>Между делом</h2>
-                <p>Драма</p>
-                <p>5 марта - 18 марта</p>
+            <div class="row item">
+                <img class="col-34" src="https://sovremennik.info/up/film/1200/poster.jpg" style="max-height: 120px; max-width: 80px;margin-bottom: 5px; margin-top: 5px; font-family: Ionicons"/>
+                <div class="col-66 padding" style="margin-left: 10px;margin-bottom: 5px; margin-top: 5px">
+                    <strong>Мордекай</strong>
+                    <p>Комедия, боевик</p>
+                    <p>C 12 марта</p>
+                    <button class="button button-balanced button-small" ng-click="showToast('Вам будет отправлено уведомление', 'long', 'center')">Узнать об открытии брони</button>
+                </div>
+            </div>
+            <div class="row item">
+                <img class="col-34" src="https://sovremennik.info/up/film/1213/poster.jpg" style="max-height: 120px; max-width: 80px;margin-bottom: 5px; margin-top: 5px; font-family: Ionicons"/>
+                <div class="col-66 padding" style="margin-left: 10px;margin-bottom: 5px; margin-top: 5px">
+                    <strong>Полное превращение</strong>
+                    <p>Фантастика, комедия</p>
+                    <p>C 19 марта</p>
+                    <button class="button button-balanced button-small" ng-click="showToast('Вам будет отправлено уведомление', 'long', 'center')">Узнать об открытии брони</button>
+                </div>
+            </div>
+            <div class="row item">
+                <img class="col-34" src="https://sovremennik.info/up/film/1202/poster.jpg" style="max-height: 120px; max-width: 80px;margin-bottom: 5px; margin-top: 5px; font-family: Ionicons"/>
+                <div class="col-66 padding" style="margin-left: 10px;margin-bottom: 5px; margin-top: 5px">
+                    <strong>Дом</strong>
+                    <p>Фантастика, мультфильм</p>
+                    <p>C 19 марта</p>
+                    <button class="button button-balanced button-small" ng-click="showToast('Вам будет отправлено уведомление', 'long', 'center')">Узнать об открытии брони</button>
+                </div>
             </div>
         </div>
     </ion-content>

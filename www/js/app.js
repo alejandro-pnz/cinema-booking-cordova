@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('cinema', ['ionic', 'cinema.controllers'])
+angular.module('cinema', ['ionic', 'cinema.controllers', 'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -50,6 +50,14 @@ angular.module('cinema', ['ionic', 'cinema.controllers'])
                 }
             }
         })
+        .state( 'app.lk', {
+            url: '/lk',
+            views: {
+                'menuContent' :{
+                    templateUrl: "templates/lk.html"
+                }
+            }
+        })
         .state( 'app.soon', {
             url: '/soon',
             views: {
@@ -67,5 +75,5 @@ angular.module('cinema', ['ionic', 'cinema.controllers'])
             }
         });
 
-    $urlRouterProvider.otherwise( "/app/timetable");
+    $urlRouterProvider.otherwise( "/app/lk");
 })
