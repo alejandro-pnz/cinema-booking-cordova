@@ -75,5 +75,5 @@ angular.module('cinema', ['ionic', 'cinema.controllers', 'ngCordova'])
             }
         });
 
-    $urlRouterProvider.otherwise( "/app/lk");
+    $urlRouterProvider.otherwise( "/app/booking");
 })
